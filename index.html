@@ -10,6 +10,9 @@
     <link rel="manifest" href="/test-pwa/manifest.json">
 
     <style>
+        main {
+            padding: 2.5rem;
+        }
         h1 {
             background-color: thistle;
             color: cornflowerblue;
@@ -17,8 +20,10 @@
     </style>
 </head>
 <body>
-    <h1>Homepage</h1>
-    <p><a href="./page1.html">page 1</a></p>
+    <main>
+        <h1>Homepage</h1>
+        <p><a href="./page1.html">page 1</a></p>
+    </main>
 
     <script>
         if ('serviceWorker' in navigator) {

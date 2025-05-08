@@ -1,10 +1,10 @@
-const CACHE_NAME = 'my-pwa-cache-v3.2';
+const CACHE_NAME = 'my-pwa-cache-v4.0';
 const GH_PAGES_PATH = '/test-pwa';
 const urlsToCache = [
-  `${GH_PAGES_PATH}/`, // Cache the start URL path
-  `${GH_PAGES_PATH}/index.html`, // Explicitly cache index.html path
-  `${GH_PAGES_PATH}/page1.html`, // Explicitly cache page1.html path
-  `${GH_PAGES_PATH}/manifest.json`, // Explicitly cache manifest path
+  `${GH_PAGES_PATH}/`,
+  `${GH_PAGES_PATH}/index.html`,
+  `${GH_PAGES_PATH}/page1.html`,
+  `${GH_PAGES_PATH}/manifest.json`,
   'https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic',
   'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css',
   'https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css'
