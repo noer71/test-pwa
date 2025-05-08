@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-pwa-cache-v5.0';
+const CACHE_NAME = 'my-pwa-cache-v5.1';
 const GH_PAGES_PATH = '/test-pwa';
 const urlsToCache = [
   `${GH_PAGES_PATH}/`,

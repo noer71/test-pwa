@@ -14,10 +14,13 @@
         main {
             padding: 2.5rem;
         }
-
         h1 {
             background-color: thistle;
             color: cornflowerblue;
+        }
+        #ver-p {
+            color: chocolate;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -42,7 +45,7 @@
             });
         }
 
-        const APP_VERSION = '5.0';  // match your manifest.json
+        const APP_VERSION = '5.1';  // match your manifest.json
         document.getElementById('ver-p').innerText = `app version: ${APP_VERSION}`;
 
         async function checkForUpdate() {
