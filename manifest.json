@@ -2,7 +2,7 @@
     "name": "Multipage PWA",
     "short_name": "MyPWA",
     "description": "A simple multipage PWA example",
-    "start_url": "/",
+    "start_url": "/test-pwa",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
