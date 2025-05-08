@@ -17,7 +17,7 @@
         h1 {
             background-color: cadetblue;
             color: darkslategrey;
-            font-weight: bold;
+            font-weight: 600;
         }
         #ver-p {
             color: chocolate;
@@ -30,6 +30,7 @@
 <body>
     <main>
         <h1>Homepage</h1>
+        <p>At this point the installed app on android is updated when connected to pc to remotely debug with dev tools. Now let's do the same but un-connected with dev tools.</p>
         <p id="ver-p">app version: --</p>
         <p><a href="./page1.html">page 1</a></p>
     </main>
@@ -47,7 +48,7 @@
             });
         }
 
-        const APP_VERSION = '5.3';  // match your manifest.json
+        const APP_VERSION = '5.4';  // match your manifest.json
         document.getElementById('ver-p').innerText = `app version: ${APP_VERSION}`;
 
         async function checkForUpdate() {
