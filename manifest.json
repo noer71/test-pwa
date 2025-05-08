@@ -5,7 +5,7 @@
     "start_url": "/test-pwa/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#000000",
+    "theme_color": "#ffffff",
     "icons": [
         {
             "src": "https://cungkedil.github.io/jadwal-susu/assets/icon-192.png",
