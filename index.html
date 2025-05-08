@@ -19,6 +19,10 @@
             color: darkslategrey;
             font-weight: 600;
         }
+        #info-p {
+            background-color: lightpink;
+            color: darkmagenta;
+        }
         #ver-p {
             color: chocolate;
             background-color: blanchedalmond;
@@ -30,7 +34,7 @@
 <body>
     <main>
         <h1>Homepage</h1>
-        <p>At this point the installed app on android is updated when connected to pc to remotely debug with dev tools. Now let's do the same but un-connected with dev tools.</p>
+        <p id="info-p">At this point the installed app on android is updated when connected to pc to remotely debug with dev tools. Now let's do the same but un-connected with dev tools.</p>
         <p id="ver-p">app version: --</p>
         <p><a href="./page1.html">page 1</a></p>
     </main>
@@ -48,13 +52,13 @@
             });
         }
 
-        const APP_VERSION = '5.4';  // match your manifest.json
+        const APP_VERSION = '5.5';  // match your manifest.json
         document.getElementById('ver-p').innerText = `app version: ${APP_VERSION}`;
 
         async function checkForUpdate() {
             try {
                 // always fetch fresh manifest
-                const res = await fetch('/test-pwa/manifest.json', { cache: 'no-store' });
+                const res = await fetch('https://noer71.github.io/test-pwa/manifest.json', { cache: 'no-store' });
                 if (!res.ok) throw new Error('Manifest fetch failed');
                 const { version } = await res.json();
                 if (version !== APP_VERSION) {
