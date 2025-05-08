@@ -10,12 +10,13 @@ const urlsToCache = [
   'https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css'
 ];
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+      .then(cache => cache.addAll(urlsToCache))
+      .then(() => {
+        // Immediately move this SW into activate phase
+        return self.skipWaiting();
       })
   );
 });
@@ -34,18 +35,18 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-self.addEventListener('activate', (event) => {
-  const cacheWhitelist = [CACHE_NAME];
+self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            // Delete old caches
-            return caches.delete(cacheName);
-          }
+    caches.keys().then(names =>
+      Promise.all(
+        names.map(name => {
+          if (name !== CACHE_NAME) return caches.delete(name);
         })
-      );
+      )
+    )
+    .then(() => {
+      // Take control of all clients immediately
+      return self.clients.claim();
     })
   );
 });
