@@ -1,8 +1,8 @@
 const CACHE_NAME = 'my-pwa-cache-v2';
 const urlsToCache = [
   '/', // Cache the homepage
-  'index.html', // Explicitly cache index.html
-  'page1.html',
+  '/test-pwa/index.html', // Explicitly cache index.html
+  '/test-pwa/page1.html',
   'https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic',
   'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css',
   'https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css'
