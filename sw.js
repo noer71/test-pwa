@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-pwa-cache-v4.0';
+const CACHE_NAME = 'my-pwa-cache-v5.0';
 const GH_PAGES_PATH = '/test-pwa';
 const urlsToCache = [
   `${GH_PAGES_PATH}/`,
@@ -49,4 +49,11 @@ self.addEventListener('activate', event => {
       return self.clients.claim();
     })
   );
+});
+
+// at the bottom of sw.js
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });

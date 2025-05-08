@@ -1,6 +1,7 @@
 {
     "name": "Multipage PWA",
     "short_name": "TestPWA",
+    "version": "5.0",
     "description": "A simple multipage PWA example",
     "start_url": "/test-pwa/",
     "display": "standalone",
